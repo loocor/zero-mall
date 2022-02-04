@@ -1,0 +1,50 @@
+# @name Create
+POST http://127.0.0.1:8001/api/product/create
+Content-Type: application/json
+authorization: {{token}}
+
+{
+  "name": "iPhone 13 Pro",
+  "desc": "A15 仿生芯片，配备全新 6 核中央处理器",
+  "stock": 10,
+  "amount": 10,
+  "status": 1
+}
+
+###
+
+# @name Detail
+POST http://127.0.0.1:8001/api/product/detail
+Content-Type: application/json
+authorization: {{token}}
+
+{
+  "id": 1
+}
+
+###
+
+# @name Update
+POST http://127.0.0.1:8001/api/product/update
+Content-Type: application/json
+authorization: {{token}}
+
+{
+  "id": 1,
+  "name": "iPhone 13 Pro Max",
+  "desc": "A15 仿生芯片，配备全新 6 核中央处理器",
+  "stock": 5,
+  "amount": 5,
+  "status": 0
+}
+
+###
+
+# @name Remove
+POST http://127.0.0.1:8001/api/product/remove
+Content-Type: application/json
+authorization: {{token}}
+
+{
+  "id": 5
+}

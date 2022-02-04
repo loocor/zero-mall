@@ -1,0 +1,39 @@
+# @name Create
+POST http://127.0.0.1:8003/api/pay/create
+Content-Type: application/json
+authorization: {{token}}
+
+{
+  "uid": 1,
+  "oid": 1,
+  "amount": 500
+}
+
+###
+
+# @name Detail
+POST http://127.0.0.1:8003/api/pay/detail
+Content-Type: application/json
+authorization: {{token}}
+
+{
+  "id": 1
+}
+
+###
+
+# @name Callback
+POST http://127.0.0.1:8003/api/pay/callback
+Content-Type: application/json
+authorization: {{token}}
+
+{
+  "id": 1,
+  "uid": 1,
+  "oid": 1,
+  "amount": 500,
+  "source": 1,
+  "status": 1
+}
+
+###

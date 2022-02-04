@@ -1,0 +1,59 @@
+# @name Create
+POST http://127.0.0.1:8002/api/order/create
+Content-Type: application/json
+authorization: {{token}}
+
+{
+  "uid": 1,
+  "pid": 1,
+  "amount": 300,
+  "status": 0
+}
+
+###
+
+# @name Detail
+POST http://127.0.0.1:8002/api/order/detail
+Content-Type: application/json
+authorization: {{token}}
+
+{
+  "id": 1
+}
+
+###
+
+# @name Update
+POST http://127.0.0.1:8002/api/order/update
+Content-Type: application/json
+authorization: {{token}}
+
+{
+  "id": 1,
+  "amount": 300,
+  "status": 0
+}
+
+###
+
+# @name Remove
+POST http://127.0.0.1:8002/api/order/remove
+Content-Type: application/json
+authorization: {{token}}
+
+{
+  "id": 1
+}
+
+###
+
+# @name List
+POST http://127.0.0.1:8002/api/order/list
+Content-Type: application/json
+authorization: {{token}}
+
+{
+  "uid": 1
+}
+
+###

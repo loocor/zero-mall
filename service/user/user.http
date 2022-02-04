@@ -1,0 +1,33 @@
+# @name Register
+POST http://127.0.0.1:8000/api/user/register
+Content-Type: application/json
+
+{
+  "name": "Jarvis",
+  "gender": 1,
+  "mobile": "17708001490",
+  "password": "17708001490"
+}
+
+###
+
+# @name Login
+POST http://127.0.0.1:8000/api/user/login
+Content-Type: application/json
+
+{
+  "mobile": "17708001490",
+  "password": "17708001490"
+}
+> {% client.global.set("token", response.body["accessToken"]); %}
+
+###
+
+# @name UserInfo
+POST http://127.0.0.1:8000/api/user/userinfo
+Content-Type: application/json
+authorization: {{token}}
+
+{
+  "uid": 1
+}

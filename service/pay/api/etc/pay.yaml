@@ -15,8 +15,6 @@ Auth:
   AccessExpire: 86400
 
 PayRpc:
-  App: payapi
-  Token: 6jKNZbEpYGeUMAifz10gOnmoty3TV
   Etcd:
     Hosts:
       - etcd:2379
